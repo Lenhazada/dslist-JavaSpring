@@ -18,7 +18,7 @@ O projeto simula um cenário real de backend, sendo ideal para fins de **aprendi
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 - **Java 17**
 - **Spring Boot**
@@ -31,7 +31,7 @@ O projeto simula um cenário real de backend, sendo ideal para fins de **aprendi
 
 ---
 
-## 🧱 Arquitetura do Projeto
+##  Arquitetura do Projeto
 
 O projeto segue uma **arquitetura em camadas**, separando bem as responsabilidades:
 
@@ -45,17 +45,17 @@ DTOs         -> Transferência de dados
 
 ---
 
-## 🔄 Funcionalidades Principais
+##  Funcionalidades Principais
 
-- 📋 Listar todos os jogos
-- 📂 Listar jogos por lista
-- 🔍 Buscar jogo por ID
-- 🔁 Reordenar jogos dentro de uma lista
-- 📤 Retorno de dados otimizado com DTOs e Projections
+-  Listar todos os jogos
+-  Listar jogos por lista
+-  Buscar jogo por ID
+-  Reordenar jogos dentro de uma lista
+-  Retorno de dados otimizado com DTOs e Projections
 
 ---
 
-## 🔗 Endpoints da API (exemplo)
+##  Endpoints da API (exemplo)
 
 ```http
 GET /games
@@ -67,7 +67,7 @@ POST /lists/{listId}/replacement
 
 ---
 
-## ▶️ Como Executar o Projeto
+##  Como Executar o Projeto
 
 ### Pré-requisitos
 - Java 17+
@@ -93,7 +93,7 @@ http://localhost:8080
 
 ---
 
-## 🧪 Banco de Dados
+##  Banco de Dados
 
 - O projeto utiliza **H2** para ambiente de testes
 - Script de carga inicial disponível em `import.sql`
@@ -101,7 +101,7 @@ http://localhost:8080
 
 ---
 
-## 📚 Aprendizados com o Projeto
+##  Aprendizados com o Projeto
 
 Durante o desenvolvimento, foi possível praticar:
 
