@@ -8,6 +8,16 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+/**
+ * Entidade que representa uma lista de jogos.
+ *
+ * Uma GameList agrupa vários jogos e define a ordem em que
+ * eles aparecem dentro da lista.
+ *
+ * O relacionamento com Game é feito de forma indireta,
+ * por meio da entidade Belonging, permitindo controlar
+ * a ordem de cada jogo na lista.
+ */
 @Entity
 @Table(name = "tb_game_list")
 public class GameList {
@@ -18,13 +28,16 @@ public class GameList {
 	private String name;
 	
 	public GameList() {
+		// Construtor padrão
 	}
 
 	public GameList(Long id, String name) {
 		this.id = id;
 		this.name = name;
 	}
-
+	/* ----------------------
+       Getters e Setters
+       ---------------------- */
 	public Long getId() {
 		return id;
 	}
@@ -41,11 +54,14 @@ public class GameList {
 		this.name = name;
 	}
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
-	}
+	/* ----------------------
+       Equals e HashCode
+       ---------------------- */
 
+	/**
+	 * Igualdade baseada apenas no ID,
+	 * garantindo consistência no contexto de persistência.
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -57,6 +73,10 @@ public class GameList {
 		GameList other = (GameList) obj;
 		return Objects.equals(id, other.id);
 	}
-	
-	
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
 }

@@ -9,6 +9,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+/** 
+ * Entidades que representa um jogo no sistema 
+ * Essa classe mapeia a tabela "tb_game" no banco de dados e contém 
+ * as informações principais de cada jogo disponivel na aplicação.
+ */
 @Entity
 @Table(name = "tb_game")
 public class Game {
@@ -32,9 +37,10 @@ public class Game {
 	private String longDescription;
 	
 	public Game() {
-		
+		// Construtor padrão
 	}
 
+	// Construtor com todos os atributos
 	public Game(Long id, String title, Integer year, String genre, String platforms, Double score, String imgUrl,
 			String shortDescription, String longDescription) {
 		this.id = id;
@@ -48,6 +54,9 @@ public class Game {
 		this.longDescription = longDescription;
 	}
 
+	/* ----------------------
+       Getters e Setters
+       ---------------------- */
 	public long getId() {
 		return id;
 	}
@@ -120,11 +129,14 @@ public class Game {
 		this.longDescription = longDescription;
 	}
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
-	}
+	/* ----------------------
+       Equals e HashCode
+       ---------------------- */
 
+	/**
+	 * Os métodos equals e hashCode são baseados no ID,
+	 * garantindo identidade correta da entidade no contexto do JPA.
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -137,9 +149,9 @@ public class Game {
 		return Objects.equals(id, other.id);
 	}
 
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
 
-	
-	
-	
-	
 }
