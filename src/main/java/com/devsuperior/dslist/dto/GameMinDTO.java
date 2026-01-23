@@ -3,6 +3,12 @@ package com.devsuperior.dslist.dto;
 import com.devsuperior.dslist.entities.Game;
 import com.devsuperior.dslist.projections.GameMinProjection;
 
+/**
+ * DTO utilizado para representar uma visão resumida do jogo.
+ *
+ * Contém apenas os campos essenciais para listagens,
+ * reduzindo o volume de dados trafegados na API.
+ */
 public class GameMinDTO {
 	
 	private Long id;
@@ -12,6 +18,7 @@ public class GameMinDTO {
 	private String shortDescription;
 	
 	public GameMinDTO() {
+		// Construtor padrão
 	}
 
 	public GameMinDTO(Game entity) {
@@ -30,6 +37,9 @@ public class GameMinDTO {
 		shortDescription = projection.getShortDescription();
 	}
 
+	/* ----------------------
+       Getters e Setters
+       ---------------------- */
 	public Long getId() {
 		return id;
 	}
@@ -49,7 +59,5 @@ public class GameMinDTO {
 	public String getShortDescription() {
 		return shortDescription;
 	}
-
-
 
 }

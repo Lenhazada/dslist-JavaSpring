@@ -4,6 +4,12 @@ import org.springframework.beans.BeanUtils;
 
 import com.devsuperior.dslist.entities.Game;
 
+/**
+ * DTO utilizado para representar os dados completos de um jogo.
+ *
+ * É usado quando é necessário retornar todas as informações
+ * detalhadas da entidade Game.
+ */
 public class GameDTO {
 	private Long id;
 	private String title;
@@ -16,12 +22,16 @@ public class GameDTO {
 	private String longDescription;
 
 	public GameDTO() {
+		// Construtor padrão
 	}
 
 	public GameDTO(Game entity) {
 		BeanUtils.copyProperties(entity, this);
 	}
 
+	/* ----------------------
+	   Getters e Setters
+	   ---------------------- */
 	public Long getId() {
 		return id;
 	}
