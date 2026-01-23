@@ -8,6 +8,12 @@ import org.springframework.data.jpa.repository.Query;
 import com.devsuperior.dslist.entities.Game;
 import com.devsuperior.dslist.projections.GameMinProjection;
 
+/**
+ * Repositório responsável pelo acesso aos dados da entidade Game.
+ *
+ * Utiliza Spring Data JPA para realizar consultas no banco de dados,
+ * incluindo consultas customizadas com projections para otimização.
+ */
 public interface GameRepository extends JpaRepository<Game, Long>{
 
 	@Query(nativeQuery = true, value = """
