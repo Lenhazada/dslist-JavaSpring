@@ -12,6 +12,12 @@ import com.devsuperior.dslist.dto.GameDTO;
 import com.devsuperior.dslist.dto.GameMinDTO;
 import com.devsuperior.dslist.services.GameService;
 
+/**
+ * Controller responsável por expor os endpoints relacionados aos jogos.
+ *
+ * Atua como camada de entrada da API, recebendo requisições HTTP
+ * e delegando o processamento para a camada de serviço.
+ */
 @RestController
 @RequestMapping(value = "/games")
 public class GameController {

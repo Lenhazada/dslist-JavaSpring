@@ -16,6 +16,12 @@ import com.devsuperior.dslist.dto.ReplacementDTO;
 import com.devsuperior.dslist.services.GameListService;
 import com.devsuperior.dslist.services.GameService;
 
+/**
+ * Controller responsável pelos endpoints de listas de jogos.
+ *
+ * Permite consultar listas, recuperar jogos associados a uma lista
+ * e realizar operações de reordenação.
+ */
 @RestController
 @RequestMapping(value = "/lists")
 public class GameListController {
