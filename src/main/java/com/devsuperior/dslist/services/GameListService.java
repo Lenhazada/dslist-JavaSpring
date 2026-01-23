@@ -12,6 +12,12 @@ import com.devsuperior.dslist.projections.GameMinProjection;
 import com.devsuperior.dslist.repositories.GameListRepository;
 import com.devsuperior.dslist.repositories.GameRepository;
 
+/**
+ * Serviço responsável pelas regras de negócio das listas de jogos.
+ *
+ * Centraliza a lógica de recuperação dos jogos por lista
+ * e a reordenação dos jogos dentro de uma lista específica.
+ */
 @Service
 public class GameListService {
 	

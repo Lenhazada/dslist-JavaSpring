@@ -12,6 +12,12 @@ import com.devsuperior.dslist.entities.Game;
 import com.devsuperior.dslist.projections.GameMinProjection;
 import com.devsuperior.dslist.repositories.GameRepository;
 
+/**
+ * Serviço responsável pelas regras de negócio relacionadas aos jogos.
+ *
+ * Atua como intermediário entre os controllers e os repositórios,
+ * concentrando a lógica de consulta e transformação dos dados em DTOs.
+ */
 @Service
 public class GameService {
 
